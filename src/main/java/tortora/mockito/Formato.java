@@ -1,4 +1,6 @@
 package tortora.mockito;
 
-public class Formato {
+public enum Formato {
+    HTML,
+    TEXTO
 }
