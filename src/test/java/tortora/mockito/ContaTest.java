@@ -8,6 +8,7 @@ import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 public class ContaTest {
@@ -32,8 +33,13 @@ public class ContaTest {
         conta.validaSaldo(500);
         conta.validaSaldo(600);
 
-        Mockito.verify(conta, Mockito.times(3)).validaSaldo(anyInt());
+        verify(conta, Mockito.times(3)).validaSaldo(anyInt());
+    }
 
+    @Test
+    void retornaTrueParaQualquerValorNaValidacaoDeSaldo() {
+        doNothing().when(conta).validaSaldo(anyInt());
+        conta.validaSaldo(3500);
     }
 
 }
