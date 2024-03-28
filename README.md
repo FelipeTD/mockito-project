@@ -1,2 +1,2 @@
-# mockito-project
-Projeto utilizando mockito para entender seus conceitos
+# Mockito
+Projeto utilizando mockito para entender os seus conceitos
